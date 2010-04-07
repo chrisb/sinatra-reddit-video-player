@@ -9,7 +9,7 @@
     %h2 /r/dubstep video browser
     %h1 What's up, dude? 
     #controls
-      %a.prev{ :href => 'javascript:void(0);', :onClick => 'nextVideo(); return false;' } Previous
+      %a.prev{ :href => 'javascript:void(0);', :onClick => 'prevVideo(); return false;' } Previous
       %a.next{ :href => 'javascript:void(0);', :onClick => 'nextVideo(); return false;' } Next
       %div.clear
     #player-container
@@ -18,6 +18,6 @@
       Built w/Ruby + Sinatra:
       %a{ :href => 'http://github.com/chrisb/sinatra-reddit-video-player' } Source Code @ GitHub
       |
-      %a{ :href => 'http://github.com/chrisb/sinatra-reddit-video-player' } Feedback/Discuss
+      %a{ :href => 'http://www.reddit.com/r/dubstep/comments/bnujw/another_rdubstep_player_but_with_continuous_play/' } Feedback/Discuss
     :javascript
       var playlist = [ #{@db[:videos].all.map { |r| r.to_json }.join(',')} ];

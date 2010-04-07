@@ -40,6 +40,16 @@ function nextVideo() {
   }
 }
 
+function prevVideo() {
+  currentVideoIndex--;
+  var nextVideo = playlist[currentVideoIndex];
+  if(nextVideo==null) {
+    alert('Out of content :(')
+  } else {
+    embedVideo(nextVideo);
+  }
+}
+
 function onytplayerStateChange(newState) {
   if(newState==0) {
     log('Video has finished playing!')
