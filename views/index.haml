@@ -1,0 +1,18 @@
+%html
+  %head
+    %title videos on /r/dubstep
+    %script{ :type => 'text/javascript', :src => '/javascripts/prototype.js' }
+    %script{ :type => 'text/javascript', :src => '/javascripts/swfobject.js' }
+    %script{ :type => 'text/javascript', :src => '/javascripts/dubbit.js' }
+    %link{ :href => "/stylesheets/dubbit.css", :media => "screen", :rel => "stylesheet", :type => "text/css" } 
+  %body
+    %h2 /r/dubstep video browser
+    %h1 What's up, dude? 
+    #controls
+      %a.prev{ :href => 'javascript:void(0);', :onClick => 'nextVideo(); return false;' } Previous
+      %a.next{ :href => 'javascript:void(0);', :onClick => 'nextVideo(); return false;' } Next
+      %div.clear
+    #player-container
+    #video-info
+    :javascript
+      var playlist = [ #{@db[:videos].all.map { |r| r.to_json }.join(',')} ];

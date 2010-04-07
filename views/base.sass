@@ -1,0 +1,36 @@
+=border-radius( !size, !direction = "both" )
+  @if !direction == "both"
+    :-border-radius= !size
+    :-moz-border-radius= !size
+    :-webkit-border-radius= !size
+  @if !direction == "top"
+    :-border-radius-topleft= !size
+    :-moz-border-radius-topleft= !size
+    :-webkit-border-top-left-radius= !size
+    :-border-radius-topright= !size
+    :-moz-border-radius-topright= !size
+    :-webkit-border-top-right-radius= !size
+  @if !direction == "bottom"
+    :-border-radius-bottomleft= !size
+    :-moz-border-radius-bottomleft= !size
+    :-webkit-border-bottom-left-radius= !size
+    :-border-radius-bottomright= !size
+    :-moz-border-radius-bottomright= !size
+    :-webkit-border-bottom-right-radius= !size
+  @if !direction == "left"
+    :-border-radius-bottomleft= !size
+    :-moz-border-radius-bottomleft= !size
+    :-webkit-border-bottom-left-radius= !size
+    :-border-radius-topleft= !size
+    :-moz-border-radius-topleft= !size
+    :-webkit-border-top-left-radius= !size
+  @if !direction == "right"
+    :-border-radius-topright= !size
+    :-moz-border-radius-topright= !size
+    :-webkit-border-top-right-radius= !size
+    :-border-radius-bottomright= !size
+    :-moz-border-radius-bottomright= !size
+    :-webkit-border-bottom-right-radius= !size
+    
+.clear
+  :clear both
