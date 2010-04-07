@@ -1,6 +1,5 @@
 require 'rubygems'
 require 'sinatra'
-
 require 'dubbit'
 
 run Sinatra::Application

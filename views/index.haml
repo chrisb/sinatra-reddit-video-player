@@ -14,5 +14,10 @@
       %div.clear
     #player-container
     #video-info
+    #about
+      Built w/Ruby + Sinatra:
+      %a{ :href => 'http://github.com/chrisb/sinatra-reddit-video-player' } Source Code @ GitHub
+      |
+      %a{ :href => 'http://github.com/chrisb/sinatra-reddit-video-player' } Feedback/Discuss
     :javascript
       var playlist = [ #{@db[:videos].all.map { |r| r.to_json }.join(',')} ];
